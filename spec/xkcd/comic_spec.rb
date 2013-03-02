@@ -8,7 +8,7 @@ describe Xkcd::Comic do
     }
   end
 
-  after(:all)  { VCR.eject_cassette }
+  after(:all) { VCR.eject_cassette }
 
   subject { Xkcd::Comic.new }
 
@@ -24,23 +24,20 @@ describe Xkcd::Comic do
     should be_a(String)
   }
 
-  its(:alt) {
-    should_not be_nil
-    should be_a(String)
-  }
+  context "if it's the 404 comic" do
+    subject { Xkcd::Comic.new 404 }
 
-  its(:img) {
-    should_not be_nil
-    should be_a(String)
-    pending 'Find adequate matcher' # should be_a valid_uri
-  }
+    its(:id) { should eql 404 }
+    its(:title) { should eql 'Not Found' }
+  end
 
-  its(:url) {
-    should_not be_nil
-    should be_a(String)
-    pending 'Find adequate matcher' # should be_a valid_uri
-  }
+  context "given an invalid id" do
 
-  its(:date) { should_not be_nil }
+    it 'should raise error' do
+      expect {
+        Xkcd::Comic.new :not_a_valid_comic
+      }.to raise_error Xkcd::Comic::InvalidComicId
+    end
+  end
 end
 

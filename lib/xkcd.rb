@@ -6,7 +6,7 @@ require "json"
 module Xkcd
   require "xkcd/comic"
 
-  def last
+  def latest
     Xkcd::Comic.latest
   end
 

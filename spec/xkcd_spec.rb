@@ -8,7 +8,7 @@ describe Xkcd do
     }
   end
 
-  after(:all)  { VCR.eject_cassette }
+  after(:all) { VCR.eject_cassette }
 
   it 'should have a version' do
     expect(Xkcd::VERSION).to be_an(String)
@@ -16,7 +16,7 @@ describe Xkcd do
 
   context 'given an invalid comic id' do
     it 'should be nil' do
-      expect(subject[:its_invalid]).not_to be
+      expect(subject[:not_a_valid_comic]).not_to be
     end
   end
 
