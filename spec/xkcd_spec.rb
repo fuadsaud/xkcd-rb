@@ -15,7 +15,7 @@ describe Xkcd do
   end
 
   context 'given an invalid comic id' do
-    it 'should raise error' do
+    it 'should be nil' do
       expect(subject[:its_invalid]).not_to be
     end
   end
