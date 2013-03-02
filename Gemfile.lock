@@ -1,0 +1,30 @@
+PATH
+  remote: .
+  specs:
+    xkcd (0.1.0)
+      httparty
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.3.3)
+    crack (0.3.2)
+    httparty (0.10.2)
+      multi_json (~> 1.0)
+      multi_xml (>= 0.5.2)
+    multi_json (1.6.1)
+    multi_xml (0.5.3)
+    rake (0.9.6)
+    vcr (2.4.0)
+    webmock (1.9.0)
+      addressable (>= 2.2.7)
+      crack (>= 0.1.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  rake
+  vcr
+  webmock
+  xkcd!
