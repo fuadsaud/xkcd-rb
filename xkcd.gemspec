@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.authors       = ["Fuad Saud"]
   gem.email         = ["fuadksd@gmail.com"]
   gem.description   = "Wrapper for the xkcd.com API"
-  gem.summary       = "Write a gem summary"
+  gem.summary       = "Get access to the smartest webcomic in teh interwebz right from your ruby app"
   gem.homepage      = "http://github.com/fuadsaud/xkcd-rb"
 
   gem.files         = `git ls-files`.split($/)
