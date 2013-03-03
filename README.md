@@ -1,29 +1,22 @@
 # Xkcd
 
-TODO: Write a gem description
-
-## Installation
-
-Add this line to your application's Gemfile:
-
-    gem 'xkcd'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install xkcd
+Ruby wrapper for the xkcd API
 
 ## Usage
 
-TODO: Write usage instructions here
+Deadly simple:
 
-## Contributing
+```ruby
+Xkcd[1000] # Get comic by id
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Xkcd.latest # Get the latest comic - orly?
+
+Xkcd.random # Get a random comic
+```
+
+Groovy, huh?
+
+## TODO
+
+- Wrap explainxkcd.com wiki(?)
+
