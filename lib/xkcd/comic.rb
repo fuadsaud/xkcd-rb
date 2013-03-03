@@ -35,11 +35,9 @@ module Xkcd
       end
     end
 
-    class << self
-      def all
-        last = Comic.new
-        (1...last.id).each {|id| Comic.new(id) } << last
-      end
+    def self.all
+      last = Comic.new
+      (1...last.id).each {|id| Comic.new(id) } << last
     end
   end
 end
