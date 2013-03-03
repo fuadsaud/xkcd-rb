@@ -16,6 +16,9 @@ module Xkcd
 
     private
     def initialize(id = nil)
+      # Get the latest comic id and picks a random number in the range
+      id = rand(new.id) + 1 if id == :random
+
       if id == 404
         @id = 404
         @title = 'Not Found'
