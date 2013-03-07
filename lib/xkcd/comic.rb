@@ -2,6 +2,14 @@ require 'addressable/uri'
 require 'ostruct'
 
 module Xkcd
+  #
+  # The comic objects have at least an id and a title.
+  # Other attributes are:
+  # - url,
+  # - date,
+  # - img (the iage URL)
+  # - alt (the alt text for the image).
+  #
   class Comic
     class InvalidComicId < Exception; end
 
