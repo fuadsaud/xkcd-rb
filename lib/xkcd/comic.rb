@@ -1,5 +1,4 @@
 require 'addressable/uri'
-require 'ostruct'
 
 module Xkcd
   #
