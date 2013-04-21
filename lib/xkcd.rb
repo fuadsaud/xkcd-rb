@@ -10,8 +10,7 @@ module Xkcd
     #
     # Fetch a comic from the xkcd API.
     #
-    # Parameters:
-    # - id: the comic number or :random. Assumes the latest comic if not given
+    # @param id [Integer, Symbol] the comic number or :random. Assumes the latest comic if not given
     #
     def [](id)
       Xkcd::Comic.new(id)
